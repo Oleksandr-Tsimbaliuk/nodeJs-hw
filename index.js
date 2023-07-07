@@ -12,14 +12,24 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       const newContact = await contacts.addContact({ name, email, phone });
       return console.log(newContact);
 
+    case "updateById":
+      const updateContact = await contacts.updateContactById(
+        id,
+        name,
+        email,
+        phone
+      );
+      return console.log(updateContact);
+
     default:
       break;
   }
 };
 
 invokeAction({
-  action: "addContact",
-  name: "Ben",
-  email: "Ben@gmail.com",
-  phone: "+386634588512",
+  action: "updateById",
+  id: "Ec1a0yARbL86GTtgxwKcj",
+  name: "Ben Bat",
+  email: "Ben490@gmail.com",
+  phone: "+4906634588512",
 });
