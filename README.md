@@ -1,1 +1,5 @@
-# nodeJs-hw
+![list](https://github.com/Oleksandr-Tsimbaliuk/nodeJs-hw/assets/115025828/cd6eb7d0-636d-4766-9c28-5363df4b164a)
+![get](https://github.com/Oleksandr-Tsimbaliuk/nodeJs-hw/assets/115025828/227bf014-6aed-44a2-af27-f62c0f5fa416)
+![add](https://github.com/Oleksandr-Tsimbaliuk/nodeJs-hw/assets/115025828/57b100b0-58d9-4f96-a45a-b120f51c229d)
+![remove](https://github.com/Oleksandr-Tsimbaliuk/nodeJs-hw/assets/115025828/3e3f7da4-787f-468f-b98a-3b3bd24c508b)
+![Update](https://github.com/Oleksandr-Tsimbaliuk/nodeJs-hw/assets/115025828/c6a28d9f-890f-4b92-9bec-c497504bcbbb)
