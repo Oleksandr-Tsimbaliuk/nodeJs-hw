@@ -9,6 +9,13 @@ const getAllContacts = async () => {
   return JSON.parse(data);
 };
 
+const getContactById = async (contactId) => {
+  const contacts = await getAllContacts();
+  result = contacts.find((contact) => contact.id === contactId);
+  return result || null;
+};
+
 module.exports = {
   getAllContacts,
+  getContactById,
 };
