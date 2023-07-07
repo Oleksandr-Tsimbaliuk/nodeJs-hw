@@ -47,14 +47,7 @@ const removeContactById = async (id) => {
   }
   const [result] = contacts.splice(index, 1);
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-  console.log(result);
-  console.log([result]);
   return result || null;
-  // console.log(`contactToRemove: ${contactToRemove}`);
-  // const filteredContacts = contacts.filter(
-  //   (contact) => contact.id !== contactId
-  // );
-  // return filteredContacts;
 };
 
 module.exports = {
