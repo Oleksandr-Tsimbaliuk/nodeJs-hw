@@ -21,15 +21,25 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       );
       return console.log(updateContact);
 
+    case "removeContact":
+      const removedContact = await contacts.removeContactById(id);
+      if (!removedContact) {
+        console.log("Error, there is no contact with such id");
+        return;
+      }
+      console.log(removedContact);
+      return console.log(removedContact);
+    //   return console.log(`Contact successfully removed: ${removedContact}`);
+
     default:
       break;
   }
 };
 
 invokeAction({
-  action: "updateById",
-  id: "Ec1a0yARbL86GTtgxwKcj",
-  name: "Ben Bat",
-  email: "Ben490@gmail.com",
-  phone: "+4906634588512",
+  action: "removeContact",
+  id: "Z5sbDlS7pCzNsnAHLtDJd",
+  //   name: "Ben Bat",
+  //   email: "Ben490@gmail.com",
+  //   phone: "+4906634588512",
 });
