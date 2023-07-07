@@ -8,10 +8,18 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
     case "getContact":
       const getContact = await contacts.getContactById(id);
       console.log(getContact);
+    case "addContact":
+      const newContact = await contacts.addContact({ name, email, phone });
+      return console.log(newContact);
 
     default:
       break;
   }
 };
 
-invokeAction({ action: "getContact", id: "05olLMgyVQdWRwgKfg5J6" });
+invokeAction({
+  action: "addContact",
+  name: "Ben",
+  email: "Ben@gmail.com",
+  phone: "+386634588512",
+});
