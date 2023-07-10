@@ -14,15 +14,21 @@ const argv = program.opts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
+    
     case "list":
       const data = await contacts.getAllContacts();
-      return console.table(data);
+      console.table(data);
+      break;
+
     case "get":
       const getContact = await contacts.getContactById(id);
       console.table(getContact);
+      break;
+
     case "add":
       const newContact = await contacts.addContact({ name, email, phone });
-      return console.table(newContact);
+      console.table(newContact);
+      break;
 
     case "updateById":
       const updateContact = await contacts.updateContactById(
@@ -31,19 +37,23 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
         email,
         phone
       );
-      return console.table(updateContact);
+
+      console.table(updateContact);
+      break;
 
     case "remove":
       const removedContact = await contacts.removeContactById(id);
       if (removedContact === null) {
-        console.log("Error, there is no contact with such id");
+        console.log(null);
         return;
       }
-      return console.table(removedContact);
-    //   return console.log(`Contact successfully removed: ${removedContact}`);
+      console.table(removedContact);
+      break;
+    //   break console.log(`Contact successfully removed: ${removedContact}`);
 
     default:
       console.warn("\x1B[31m Unknown action type!");
+      break;
   }
 };
 
